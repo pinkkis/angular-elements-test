@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ElementsModule } from 'projects/elements/src/elements/elements.module';
+import { SafeHtmlPipe } from './safe-html.pipe';
 
 @NgModule({
-  declarations: [
-	AppComponent
-  ],
-  imports: [
-	BrowserModule,
-	AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		SafeHtmlPipe
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		ElementsModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
