@@ -1,23 +1,19 @@
-import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
-import { FooComponent } from './foo/foo.component';
+import { NgModule, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FooComponent } from './foo.component';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
-	declarations: [
-		FooComponent
-	],
+	declarations: [FooComponent],
 	imports: [
 		CommonModule
 	],
-	providers: [],
 	entryComponents: [FooComponent],
-	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ElementsModule {
+export class FooModule {
 	constructor(private injector: Injector) {
 		const elements: any[] = [
-			[FooComponent, 'app-foo']
+			[FooComponent, 'kk-foo']
 		];
 
 		for (const [component, name] of elements) {
@@ -25,5 +21,4 @@ export class ElementsModule {
 			customElements.define(name, el);
 		}
 	}
-
 }

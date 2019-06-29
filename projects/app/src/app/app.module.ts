@@ -3,8 +3,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ElementsModule } from 'projects/elements/src/elements/elements.module';
 import { SafeHtmlPipe } from './safe-html.pipe';
+import { FooModule } from 'custom-elements';
 
 @NgModule({
 	declarations: [
@@ -14,7 +14,7 @@ import { SafeHtmlPipe } from './safe-html.pipe';
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		ElementsModule,
+		FooModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],
