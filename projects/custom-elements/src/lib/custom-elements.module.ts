@@ -1,19 +1,23 @@
 import { NgModule, Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooComponent } from './foo.component';
+
 import { createCustomElement } from '@angular/elements';
 
+import { FooComponent } from './foo/foo.component';
+import { BarComponent } from './bar/bar.component';
+
 @NgModule({
-	declarations: [FooComponent],
+	declarations: [FooComponent, BarComponent],
 	imports: [
 		CommonModule
 	],
-	entryComponents: [FooComponent],
+	entryComponents: [FooComponent, BarComponent],
 })
-export class FooModule {
+export class CustomElementsModule {
 	constructor(private injector: Injector) {
 		const elements: any[] = [
-			[FooComponent, 'kk-foo']
+			[FooComponent, 'kk-foo'],
+			[BarComponent, 'kk-bar']
 		];
 
 		for (const [component, name] of elements) {

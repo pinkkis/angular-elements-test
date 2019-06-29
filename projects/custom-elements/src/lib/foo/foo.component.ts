@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy } from '@angular/core';
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooComponent implements OnInit {
-	public counter: number = 0;
+	public counter = 0;
 
 	constructor() { }
 

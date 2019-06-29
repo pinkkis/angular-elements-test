@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'app';
-	htmlStringWithComponent = `<p> asdfasdf </p> <kk-foo></kk-foo> <hr>`;
+	htmlStringWithComponent = `<p> asdfasdf </p> <kk-foo></kk-foo> <hr> <kk-bar></kk-bar>`;
 }
